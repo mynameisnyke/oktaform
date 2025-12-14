@@ -38,4 +38,34 @@ output "employee_status_attribute" {
   }
 }
 
+output "soc2_priv_password_policy_id" {
+  description = "ID of the SOC2-compliant password policy for PRIV groups."
+  value       = okta_policy_password.soc2_priv_password.id
+}
+
+output "soc2_base_password_policy_id" {
+  description = "ID of the SOC2-compliant password policy for BASE_ALL_EMPLOYEES group."
+  value       = okta_policy_password.soc2_base_password.id
+}
+
+output "soc2_priv_session_policy_id" {
+  description = "ID of the SOC2-compliant session policy for PRIV groups."
+  value       = okta_policy_signon.soc2_priv_session.id
+}
+
+output "soc2_base_session_policy_id" {
+  description = "ID of the SOC2-compliant session policy for BASE_ALL_EMPLOYEES group."
+  value       = okta_policy_signon.soc2_base_session.id
+}
+
+output "standard_password_policy_id" {
+  description = "ID of the standard password policy for all employees."
+  value       = okta_policy_password.all_employees_password.id
+}
+
+output "standard_session_policy_id" {
+  description = "ID of the standard session policy for all employees."
+  value       = okta_policy_signon.all_employees_session.id
+}
+
 
