@@ -1,11 +1,17 @@
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
 
 # Terraform
 .terraform/
 *.tfstate
 *.tfstate.*
+*.tfstate.backup
 crash.log
 crash.*.log
+*.log
+tf_trace.log
 
 # Local overrides
 override.tf
@@ -16,5 +22,23 @@ override.tf.json
 # Variable files (often contain secrets)
 *.tfvars
 *.tfvars.json
+# But keep the example file
+!terraform.tfvars.example
 
+# Terraform lock file (keep this - it's important for consistency)
+# .terraform.lock.hcl
 
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+
+# Provider schema cache (if generated)
+provider-schema.json
