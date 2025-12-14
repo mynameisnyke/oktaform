@@ -1,0 +1,12 @@
+# Prefer the explicit org URL (recommended):
+okta_org_url = "https://dev-123456.okta.com"
+
+# Alternative (only if you don't use okta_org_url):
+# okta_org_name = "dev-123456"
+# okta_base_url = "okta.com"
+
+# Do NOT put okta_api_token in a tfvars file unless you know what you're doing.
+# Recommended:
+# export TF_VAR_okta_api_token="..."
+
+
